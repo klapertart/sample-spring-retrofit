@@ -6,7 +6,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
- * @author TRITRONIK-PC_10040
+ * @author kurakuraninja
  * @since 20/03/2023
  */
 

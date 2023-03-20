@@ -9,7 +9,7 @@ import retrofit2.http.Query;
 import java.util.List;
 
 /**
- * @author TRITRONIK-PC_10040
+ * @author kurakuraninja
  * @since 20/03/2023
  */
 
