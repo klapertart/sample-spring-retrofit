@@ -1,5 +1,6 @@
 package klapertart.lab.retrofit.services;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,6 +22,6 @@ public class UserServiceTest {
 
     @Test
     public void testGetUser(){
-        userService.getUser();
+        String defunkt = userService.getUser("defunkt");
     }
 }

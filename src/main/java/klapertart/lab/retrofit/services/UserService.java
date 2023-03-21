@@ -41,21 +41,25 @@ public class UserService {
         }
     }
 
-    public void getUser(){
+    public String getUser(String name){
         UserRepository userRepository = retrofitClient.getClient().create(UserRepository.class);
-        Call<User> user = userRepository.getUser("defunkt");
+        Call<User> user = userRepository.getUser(name);
+
+        String result = "";
         try{
             Response<User> execute = user.execute();
             if (execute.isSuccessful()){
                 User body = execute.body();
                 log.info("SUKSES GET USERS");
-                log.info(body.toString());
+                result = body.toString();
             }else{
                 log.error("GAGAL GET USERS");
+                result = "";
             }
         }catch (Exception e){
             e.printStackTrace();
+            result = "";
         }
-
+        return result;
     }
 }
